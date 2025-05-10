@@ -24,13 +24,26 @@ class HomeScreen extends StatelessWidget {
         ),
         child:Container(
           padding: const EdgeInsets.all(20),
-          child: Row(
+          child: Column(
             children: [
-              CircleAvatar(
-                child: Text('J'),
+              Row(
+                children: [
+                  CircleAvatar(
+                    child: Text('J'),
+                  ),
+                  SizedBox(width: 20,),
+                  Text('Adios', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+                ],
               ),
-              SizedBox(width: 20,),
-              Text('Adios', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+              Container(
+                width: double.infinity,
+                height: 200,
+                child: Image.network(
+                  'https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=70,width=1200,height=675/catalog/crunchyroll/025260e7ab620e093bff1233dd78629d.jpg',
+                  fit: BoxFit.cover,
+                ),
+              ),
+              SizedBox(height: 20,),
             ],
           ),
         ),
