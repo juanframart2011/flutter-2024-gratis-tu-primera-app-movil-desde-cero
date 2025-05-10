@@ -30,6 +30,7 @@ class HomeScreen extends StatelessWidget {
         child:Container(
           padding: const EdgeInsets.all(20),
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Row(
                 children: [
@@ -39,6 +40,14 @@ class HomeScreen extends StatelessWidget {
                   SizedBox(width: 20,),
                   Text('Adios', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
                 ],
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text('Hiiii...',
+                    maxLines: 1,
+                    overflow: TextOverflow.fade,
+                    style:TextStyle(color: Colors.grey[600], fontSize: 15, fontWeight: FontWeight.bold)
+                  ),
               ),
               Container(
                 width: double.infinity,
@@ -52,10 +61,9 @@ class HomeScreen extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    TextButton(onPressed: (){}, child: Text('Like', style: textStyle
-                    ),
-                    TextButton(onPressed: (){}, child: Text('Comment')),
-                    TextButton(onPressed: (){}, child: Text('Shared')),
+                    TextButton(onPressed: (){}, child: Text('Like', style: textStyle)),
+                    TextButton(onPressed: (){}, child: Text('Comment', style: textStyle)),
+                    TextButton(onPressed: (){}, child: Text('Shared', style: textStyle)),
                   ],
                 ),
               ),
