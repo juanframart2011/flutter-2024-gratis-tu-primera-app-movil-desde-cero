@@ -8,9 +8,11 @@ class CardFeed extends StatelessWidget {
   const CardFeed({
     super.key,
     required this.textStyle,
+    required this.card
   });
 
   final TextStyle textStyle;
+  final Map<String,String> card;
 
   @override
   Widget build(BuildContext context) {
@@ -27,9 +29,9 @@ class CardFeed extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            titleCard(),
-            descriptionCard(),
-            imageCard(),
+            titleCard(name:card['title']!),
+            descriptionCard(description: card['description']!,),
+            imageCard(image: card['image']!,),
             Container(
               child: buttonCard(textStyle: textStyle),
             ),

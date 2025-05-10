@@ -3,7 +3,10 @@ import 'package:flutter/material.dart';
 class titleCard extends StatelessWidget {
   const titleCard({
     super.key,
+    required name,
   });
+
+  final String name;
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +16,7 @@ class titleCard extends StatelessWidget {
           child: Text('J'),
         ),
         SizedBox(width: 20,),
-        Text('Adios', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+        Text(name, style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
       ],
     );
   }

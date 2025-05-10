@@ -23,6 +23,7 @@ class ListCardsFeed extends StatelessWidget {
             fontWeight: FontWeight.bold,
             fontSize: 17,
           ),
+          card: listCard[index], // Pass the card data to the CardFeed widget
         );  
         }, itemCount: listCard.length, // Number of items in the list
     );
