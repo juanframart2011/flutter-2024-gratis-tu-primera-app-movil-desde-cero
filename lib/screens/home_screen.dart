@@ -14,9 +14,17 @@ class HomeScreen extends StatelessWidget {
         
         title: Text('Feed card'),
       ),
-      body: Center(
+      body: Container(
+        width: double.infinity,
+        height: double.infinity,
+        margin: const EdgeInsets.all(20),
+        padding: const EdgeInsets.all(20),
+        decoration: BoxDecoration(
+          color: Theme.of(context).colorScheme.primary,
+        ),
         child: Text('Feed card'),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      ),
+      backgroundColor: Colors.grey[300],// This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
