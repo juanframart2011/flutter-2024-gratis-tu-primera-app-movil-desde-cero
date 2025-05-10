@@ -22,7 +22,18 @@ class HomeScreen extends StatelessWidget {
         decoration: BoxDecoration(
           color: Theme.of(context).colorScheme.primary,
         ),
-        child: Text('Feed card'),
+        child:Container(
+          padding: const EdgeInsets.all(20),
+          child: Row(
+            children: [
+              CircleAvatar(
+                child: Text('J'),
+              ),
+              SizedBox(width: 20,),
+              Text('Adios', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+            ],
+          ),
+        ),
       ),
       backgroundColor: Colors.grey[300],// This trailing comma makes auto-formatting nicer for build methods.
     );
