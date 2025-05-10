@@ -1,3 +1,4 @@
+import 'package:feed_cards/widgets/likebutton.dart';
 import 'package:flutter/material.dart';
 class buttonCard extends StatelessWidget {
   const buttonCard({
@@ -12,7 +13,7 @@ class buttonCard extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        TextButton(onPressed: (){}, child: Text('Like', style: textStyle)),
+        likeButton(),
         TextButton(onPressed: (){}, child: Text('Comment', style: textStyle)),
         TextButton(onPressed: (){}, child: Text('Shared', style: textStyle)),
       ],
