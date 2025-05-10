@@ -7,6 +7,11 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     
+    var textStyle = TextStyle(
+                        color: Colors.red,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 17,
+                      );
     return Scaffold(
       appBar: AppBar(
         
@@ -43,7 +48,17 @@ class HomeScreen extends StatelessWidget {
                   fit: BoxFit.cover,
                 ),
               ),
-              SizedBox(height: 20,),
+              Container(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    TextButton(onPressed: (){}, child: Text('Like', style: textStyle
+                    ),
+                    TextButton(onPressed: (){}, child: Text('Comment')),
+                    TextButton(onPressed: (){}, child: Text('Shared')),
+                  ],
+                ),
+              ),
             ],
           ),
         ),
