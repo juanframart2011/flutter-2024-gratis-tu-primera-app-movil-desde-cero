@@ -20,7 +20,13 @@ class HomeScreen extends StatelessWidget {
         
         title: Text('Feed card'),
       ),
-      body: CardFeed(textStyle: textStyle),
+      body: 
+        ListView(
+          children: [
+            CardFeed(textStyle: textStyle),
+            CardFeed(textStyle: textStyle),
+          ]
+      ),
       backgroundColor: Colors.grey[300],// This trailing comma makes auto-formatting nicer for build methods.
     );
   }
